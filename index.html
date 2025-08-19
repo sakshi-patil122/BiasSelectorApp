@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BTS Bias Selector</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>💜 Choose Your BTS Bias 💜</h1>
+
+    <select id="biasSelector" onchange="showCard()">
+      <option value="">-- Select a Member --</option>
+      <option value="RM">RM</option>
+      <option value="Jin">Jin</option>
+      <option value="Suga">Suga</option>
+      <option value="J-Hope">J-Hope</option>
+      <option value="Jimin">Jimin</option>
+      <option value="V">V</option>
+      <option value="Jungkook">Jungkook</option>
+    </select>
+
+    <div id="RM" class="card">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/RM_at_W_Korea_Love_Your_W%2C_November_2023.jpg/250px-RM_at_W_Korea_Love_Your_W%2C_November_2023.jpg"
+      />
+      <h2>RM</h2>
+      <p><strong>Position:</strong> Leader & Rapper</p>
+      <p><strong>Fun Fact:</strong> IQ of 148!</p>
+    </div>
+
+    <div id="Jin" class="card">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/BTS_Jin_at_Maison_Fred%2C_13_March_2025_04.png/250px-BTS_Jin_at_Maison_Fred%2C_13_March_2025_04.png"
+      />
+      <h2>Jin</h2>
+      <p><strong>Position:</strong> Vocalist</p>
+      <p><strong>Fun Fact:</strong> Worldwide Handsome!</p>
+    </div>
+
+    <div id="Suga" class="card">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Suga_for_Marie_Claire_Korea%2C_May_2023_issue_05_%28cropped%29.png/250px-Suga_for_Marie_Claire_Korea%2C_May_2023_issue_05_%28cropped%29.png"
+      />;
+      <h2>Suga</h2>
+      <p><strong>Position:</strong> Rapper</p>
+      <p><strong>Fun Fact:</strong> Genius producer!</p>
+    </div>
+
+    <div id="J-Hope" class="card">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/J-Hope_at_the_2022_Fact_Music_Awards_on_October_8%2C_2022_%28cropped%29.jpg/250px-J-Hope_at_the_2022_Fact_Music_Awards_on_October_8%2C_2022_%28cropped%29.jpg"
+      />
+      <h2>J-Hope</h2>
+      <p><strong>Position:</strong> Rapper & Dancer</p>
+      <p><strong>Fun Fact:</strong> Sunshine of BTS!</p>
+    </div>
+
+    <div id="Jimin" class="card">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Jimin_on_the_way_to_SBS_Radio%2C_31_March_2023_%282%29.jpg/250px-Jimin_on_the_way_to_SBS_Radio%2C_31_March_2023_%282%29.jpg"
+      />
+      <h2>Jimin</h2>
+      <p><strong>Position:</strong> Vocalist & Dancer</p>
+      <p><strong>Fun Fact:</strong> Mochi vibes!</p>
+    </div>
+
+    <div id="V" class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/V_in_the_Oval_Office_of_the_White_House%2C_May_31%2C_2022_%28cropped%29.jpg" />
+      <h2>V</h2>
+      <p><strong>Position:</strong> Vocalist</p>
+      <p><strong>Fun Fact:</strong> Deep voice, soulful eyes!</p>
+    </div>
+
+    <div id="Jungkook" class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Jeon_Jungkook_at_the_White_House%2C_31_May_2022.jpg/250px-Jeon_Jungkook_at_the_White_House%2C_31_May_2022.jpg"
+      <h2>Jungkook</h2>
+      <p><strong>Position:</strong> Main Vocalist</p>
+      <p><strong>Fun Fact:</strong> Golden Maknae!</p>
+    </div>
+
+    <footer>
+      <p>Made with 💜 by Sakshi | Powered by BTS energy</p>
+    </footer>
+
+    <script>
+      function showCard() {
+        const selected = document.getElementById("biasSelector").value;
+        const cards = document.querySelectorAll(".card");
+
+        cards.forEach((card) => {
+          card.style.display = "none";
+        });
+
+        if (selected) {
+          document.getElementById(selected).style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
